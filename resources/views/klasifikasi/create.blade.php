@@ -94,6 +94,7 @@
                     <option value="Pembelian Kendaraan">Pembelian Kendaraan</option>
                     <option value="Kebutuhan Konsumtif">Kebutuhan Konsumtif</option>
                     <option value="Biaya Pernikahan">Biaya Pernikahan</option>
+                    <option value="Renovasi Rumah">Renovasi Rumah</option>
                 </select>
             </div>
             <div class="col">

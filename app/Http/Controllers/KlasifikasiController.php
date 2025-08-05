@@ -53,15 +53,13 @@ class KlasifikasiController extends Controller
         $filename = $request->file('surat_pengajuan')->store('surat_pengajuan', 'public');
 
         // 4. Panggil API dengan data yang sudah bersih
-        // $response = Http::withHeaders(['Accept' => 'application/json'])
-        //     ->post('https://projectkredit.cloud/api/predict', [
         $response = Http::withHeaders(['Accept' => 'application/json'])
-            ->post(env('API_URL') . '/predict', [ // Menggunakan env('API_URL')
+            ->post(config('api.url') . '/predict',  [
                 "umur" => $validatedData['umur'],
                 "status_pernikahan" => $validatedData['status_pernikahan'],
-                "jumlah_pengajuan" => $nasabah->jumlah_pengajuan, // Data dari DB
-                "pekerjaan" => $nasabah->pekerjaan,             // Data dari DB
-                "jumlah_penghasilan" => $nasabah->penghasilan,   // Data dari DB
+                "jumlah_pengajuan" => $nasabah->jumlah_pengajuan,
+                "pekerjaan" => $nasabah->pekerjaan,
+                "jumlah_penghasilan" => $nasabah->penghasilan,
                 "riwayat_kredit" => $validatedData['riwayat_kredit'],
                 "jumlah_tabungan" => $validatedData['jumlah_tabungan'],
                 "tujuan_kredit" => $validatedData['tujuan_kredit'],
