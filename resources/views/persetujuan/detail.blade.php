@@ -73,7 +73,7 @@
         </div>
 
         <p class="fw-semibold text-dark mt-3">
-            Hasil DBR nasabah adalah {{ $persetujuan->analisa->dbr }}% yang berarti pengajuan pembiayaan nasabah {{ $persetujuan->analisa->dbr < 30 ? 'dapat' : 'tidak dapat' }} direkomendasikan.
+            Hasil DBR nasabah adalah {{ $persetujuan->analisa->dbr }}% yang berarti pengajuan pembiayaan nasabah {{ $persetujuan->analisa->dbr < 80 ? 'dapat' : 'tidak dapat' }} direkomendasikan.
         </p>
     </div>
 </div>
