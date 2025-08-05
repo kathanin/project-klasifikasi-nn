@@ -73,8 +73,6 @@ class KlasifikasiController extends Controller
         
         $dataApi = $response->json();
 
-        dd($dataApi);
-
         // Tentukan hasil klasifikasi
         $hasil_klasifikasi = 'high';
         if ($dataApi['probabilitas_layak'] >= 0.7) $hasil_klasifikasi = 'low';
